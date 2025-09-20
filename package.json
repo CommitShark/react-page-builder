@@ -1,0 +1,56 @@
+{
+  "name": "react-page-builder",
+  "version": "1.0.0",
+  "description": "A drag-and-drop page builder with TypeScript, Framer Motion, and Styled Components",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/types/index.d.ts",
+  "scripts": {
+    "build": "rollup -c --bundleConfigAsCjs",
+    "dev": "rollup -c --bundleConfigAsCjs -w",
+    "prepare": "npm run build",
+    "start:demo": "cd demo && npm start",
+    "build:demo": "cd demo && npm run build",
+    "dev:linked": "npm run dev & npm run start:demo",
+    "install:demo": "cd demo && npm install"
+  },
+  "peerDependencies": {
+    "framer-motion": "^6.0.0",
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0",
+    "styled-components": "^5.0.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.6",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@types/node": "^24.5.2",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@types/styled-components": "^5.0.0",
+    "framer-motion": "^6.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "rollup": "^4.52.0",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "styled-components": "^5.3.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^4.6.0"
+  },
+  "keywords": [
+    "react",
+    "page-builder",
+    "drag-drop",
+    "typescript",
+    "framer-motion",
+    "styled-components"
+  ],
+  "author": "Commitshark LTD",
+  "dependencies": {
+    "rollup-plugin-peer-deps-external": "^2.2.4"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts"
+    }
+  }
+}
